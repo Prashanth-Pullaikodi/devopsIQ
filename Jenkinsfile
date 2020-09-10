@@ -9,13 +9,13 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'sudo docker build /home/ubuntu/workspace/devopsIQ_master/ -t test'
+        sh 'sudo docker build /home/ubuntu/workspace/devopsIQ_master/ -t prod'
       }
     }
 
     stage('deploy') {
       steps {
-        sh 'sudo docker run -ti -p 82:80 -d test '
+        sh 'sudo docker run -ti -p 82:80 -d prod '
       }
     }
 
