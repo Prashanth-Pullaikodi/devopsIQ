@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Cleanup') {
       steps {
-        sh 'sudo docker rm -f $(sudo docker ps -a -q)'
+        sh '#sudo docker rm -f $(sudo docker ps -a -q)'
       }
     }
 
