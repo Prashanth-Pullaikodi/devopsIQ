@@ -10,7 +10,6 @@ pipeline {
     stage('build') {
       steps {
         sh 'sudo docker build /home/ubuntu/workspace/devopsIQ_master/ -t prod'
-        junit '/home/ubuntu/workspace/*.xml'
       }
     }
 
