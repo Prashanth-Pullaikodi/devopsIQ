@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('Cleanup') {
       steps {
-        sh 'Jenkins/clean.sh'
+        sh 'sudo docker rm -f $(sudo docker ps -a -q)'
       }
     }
 
     stage('build') {
       steps {
-        sh 'sudo docker build /home/ubuntu/workspace/Test/ -t test'
+        sh 'sudo docker build /home/ubuntu/workspace/devopsIQ_master/ -t test'
       }
     }
 
